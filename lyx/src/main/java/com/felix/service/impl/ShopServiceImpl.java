@@ -8,15 +8,15 @@ import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.felix.dto.Result;
-import com.felix.entity.Shop;
+import com.felix.model.dto.Result;
+import com.felix.model.entity.Shop;
 import com.felix.mapper.ShopMapper;
 import com.felix.service.IShopService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.felix.utils.CacheClient;
-import com.felix.utils.RedisConstants;
+import com.felix.model.constants.RedisConstants;
 import com.felix.utils.RedisData;
-import com.felix.utils.SystemConstants;
+import com.felix.model.constants.SystemConstants;
 import org.springframework.data.geo.Distance;
 import org.springframework.data.geo.GeoResult;
 import org.springframework.data.geo.GeoResults;
@@ -34,7 +34,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
-import static com.felix.utils.RedisConstants.*;
+import static com.felix.model.constants.RedisConstants.*;
 
 /**
  * <p>

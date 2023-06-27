@@ -1,6 +1,6 @@
 package com.felix.service.impl;
 
-import com.felix.entity.SeckillVoucher;
+import com.felix.model.entity.SeckillVoucher;
 import com.felix.mapper.SeckillVoucherMapper;
 import com.felix.service.ISeckillVoucherService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

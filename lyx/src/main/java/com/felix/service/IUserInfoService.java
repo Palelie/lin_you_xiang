@@ -1,6 +1,6 @@
 package com.felix.service;
 
-import com.felix.entity.UserInfo;
+import com.felix.model.entity.UserInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

@@ -1,6 +1,6 @@
 package com.felix.mapper;
 
-import com.felix.entity.ShopType;
+import com.felix.model.entity.ShopType;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

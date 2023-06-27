@@ -2,12 +2,12 @@ package com.felix.service.impl;
 
 import cn.hutool.core.util.RandomUtil;
 import cn.hutool.json.JSONUtil;
-import com.felix.dto.Result;
-import com.felix.entity.ShopType;
+import com.felix.model.dto.Result;
+import com.felix.model.entity.ShopType;
 import com.felix.mapper.ShopTypeMapper;
 import com.felix.service.IShopTypeService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.felix.utils.RedisConstants;
+import com.felix.model.constants.RedisConstants;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 

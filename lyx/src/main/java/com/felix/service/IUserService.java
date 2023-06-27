@@ -1,10 +1,11 @@
 package com.felix.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.felix.dto.LoginFormDTO;
-import com.felix.dto.Result;
-import com.felix.entity.User;
+import com.felix.model.dto.LoginFormDTO;
+import com.felix.model.dto.Result;
+import com.felix.model.entity.User;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -17,7 +18,9 @@ public interface IUserService extends IService<User> {
 
     Result sendCode(String phone, HttpSession session);
 
-    Result login(LoginFormDTO loginForm, HttpSession session);
+    Result login(LoginFormDTO loginForm);
+
+    Result logout(HttpServletRequest request);
 
     /**
      * 实现用户签到

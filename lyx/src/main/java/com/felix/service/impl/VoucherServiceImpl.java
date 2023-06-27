@@ -1,10 +1,10 @@
 package com.felix.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.felix.dto.Result;
-import com.felix.entity.Voucher;
+import com.felix.model.dto.Result;
+import com.felix.model.entity.Voucher;
 import com.felix.mapper.VoucherMapper;
-import com.felix.entity.SeckillVoucher;
+import com.felix.model.entity.SeckillVoucher;
 import com.felix.service.ISeckillVoucherService;
 import com.felix.service.IVoucherService;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.annotation.Resource;
 import java.util.List;
 
-import static com.felix.utils.RedisConstants.SECKILL_STOCK_KEY;
+import static com.felix.model.constants.RedisConstants.SECKILL_STOCK_KEY;
 
 /**
  * <p>

@@ -1,6 +1,6 @@
 package com.felix.mapper;
 
-import com.felix.entity.Follow;
+import com.felix.model.entity.Follow;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

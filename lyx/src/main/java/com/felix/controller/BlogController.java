@@ -2,11 +2,11 @@ package com.felix.controller;
 
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.felix.dto.Result;
-import com.felix.dto.UserDTO;
-import com.felix.entity.Blog;
+import com.felix.model.dto.Result;
+import com.felix.model.dto.UserDTO;
+import com.felix.model.entity.Blog;
 import com.felix.service.IBlogService;
-import com.felix.utils.SystemConstants;
+import com.felix.model.constants.SystemConstants;
 import com.felix.utils.UserHolder;
 import org.springframework.web.bind.annotation.*;
 

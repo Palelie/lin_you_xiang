@@ -1,6 +1,6 @@
 package com.felix.mapper;
 
-import com.felix.entity.BlogComments;
+import com.felix.model.entity.BlogComments;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

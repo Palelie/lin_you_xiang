@@ -1,9 +1,8 @@
-package com.felix.entity;
+package com.felix.model.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -14,8 +13,8 @@ import java.time.LocalDateTime;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("tb_shop_type")
-public class ShopType implements Serializable {
+@TableName("tb_user")
+public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -26,30 +25,33 @@ public class ShopType implements Serializable {
     private Long id;
 
     /**
-     * 类型名称
+     * 手机号码
      */
-    private String name;
+    private String phone;
 
     /**
-     * 图标
+     * 密码，加密存储
      */
-    private String icon;
+    private String password;
 
     /**
-     * 顺序
+     * 昵称，默认是随机字符
      */
-    private Integer sort;
+    private String nickName;
+
+    /**
+     * 用户头像
+     */
+    private String icon = "";
 
     /**
      * 创建时间
      */
-    @JsonIgnore
     private LocalDateTime createTime;
 
     /**
      * 更新时间
      */
-    @JsonIgnore
     private LocalDateTime updateTime;
 
 

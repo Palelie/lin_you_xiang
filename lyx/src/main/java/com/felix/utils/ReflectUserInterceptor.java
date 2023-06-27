@@ -2,7 +2,8 @@ package com.felix.utils;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.util.StrUtil;
-import com.felix.dto.UserDTO;
+import com.felix.model.constants.RedisConstants;
+import com.felix.model.dto.UserDTO;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.servlet.HandlerInterceptor;
 

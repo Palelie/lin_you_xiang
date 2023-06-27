@@ -1,4 +1,4 @@
-package com.felix.utils;
+package com.felix.model.constants;
 
 public class RabbitmqConstants {
     public static final String EXCHANGE = "directExchangeA";

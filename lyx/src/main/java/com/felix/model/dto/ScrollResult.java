@@ -1,4 +1,4 @@
-package com.felix.dto;
+package com.felix.model.dto;
 
 import lombok.Data;
 

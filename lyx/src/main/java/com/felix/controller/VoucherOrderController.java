@@ -1,7 +1,7 @@
 package com.felix.controller;
 
 
-import com.felix.dto.Result;
+import com.felix.model.dto.Result;
 import com.felix.service.IVoucherOrderService;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;

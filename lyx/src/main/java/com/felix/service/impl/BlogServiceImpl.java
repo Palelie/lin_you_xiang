@@ -3,18 +3,18 @@ package com.felix.service.impl;
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.felix.dto.Result;
-import com.felix.dto.ScrollResult;
-import com.felix.dto.UserDTO;
-import com.felix.entity.Blog;
-import com.felix.entity.Follow;
-import com.felix.entity.User;
+import com.felix.model.dto.Result;
+import com.felix.model.dto.ScrollResult;
+import com.felix.model.dto.UserDTO;
+import com.felix.model.entity.Blog;
+import com.felix.model.entity.Follow;
+import com.felix.model.entity.User;
 import com.felix.mapper.BlogMapper;
 import com.felix.service.IBlogService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.felix.service.IFollowService;
 import com.felix.service.IUserService;
-import com.felix.utils.SystemConstants;
+import com.felix.model.constants.SystemConstants;
 import com.felix.utils.UserHolder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -28,8 +28,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static com.felix.utils.RedisConstants.BLOG_LIKED_KEY;
-import static com.felix.utils.RedisConstants.FEED_KEY;
+import static com.felix.model.constants.RedisConstants.BLOG_LIKED_KEY;
+import static com.felix.model.constants.RedisConstants.FEED_KEY;
 
 /**
  * <p>

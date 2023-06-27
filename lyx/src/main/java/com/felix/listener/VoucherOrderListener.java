@@ -1,7 +1,7 @@
 package com.felix.listener;
 
 import cn.hutool.json.JSONUtil;
-import com.felix.entity.VoucherOrder;
+import com.felix.model.entity.VoucherOrder;
 import com.felix.service.impl.VoucherOrderServiceImpl;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 
-import static com.felix.utils.RabbitmqConstants.*;
+import static com.felix.model.constants.RabbitmqConstants.*;
 
 /**
  * rabbitmq消费端

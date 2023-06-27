@@ -2,8 +2,8 @@ package com.felix.controller;
 
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.StrUtil;
-import com.felix.dto.Result;
-import com.felix.utils.SystemConstants;
+import com.felix.model.dto.Result;
+import com.felix.model.constants.SystemConstants;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;

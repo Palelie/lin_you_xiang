@@ -1,6 +1,6 @@
 package com.felix.service.impl;
 
-import com.felix.entity.BlogComments;
+import com.felix.model.entity.BlogComments;
 import com.felix.mapper.BlogCommentsMapper;
 import com.felix.service.IBlogCommentsService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

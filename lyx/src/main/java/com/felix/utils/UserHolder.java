@@ -1,6 +1,6 @@
 package com.felix.utils;
 
-import com.felix.dto.UserDTO;
+import com.felix.model.dto.UserDTO;
 
 public class UserHolder {
     private static final ThreadLocal<UserDTO> tl = new ThreadLocal<>();

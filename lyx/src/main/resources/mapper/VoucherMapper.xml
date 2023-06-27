@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.felix.mapper.VoucherMapper">
 
-    <select id="queryVoucherOfShop" resultType="com.felix.entity.Voucher" parameterType="java.lang.Long">
+    <select id="queryVoucherOfShop" resultType="com.felix.model.entity.Voucher" parameterType="java.lang.Long">
         SELECT
             v.`id`, v.`shop_id`, v.`title`, v.`sub_title`, v.`rules`, v.`pay_value`,
             v.`actual_value`, v.`type`, sv.`stock` , sv.begin_time , sv.end_time

@@ -15,7 +15,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
-import static com.felix.utils.RedisConstants.*;
+import static com.felix.model.constants.RedisConstants.*;
 
 /**
  * 自定义封装Redis工具类

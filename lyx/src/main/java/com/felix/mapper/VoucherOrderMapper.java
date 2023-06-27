@@ -1,6 +1,6 @@
 package com.felix.mapper;
 
-import com.felix.entity.VoucherOrder;
+import com.felix.model.entity.VoucherOrder;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

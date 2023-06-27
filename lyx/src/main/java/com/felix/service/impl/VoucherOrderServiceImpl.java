@@ -2,9 +2,9 @@ package com.felix.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.json.JSONUtil;
-import com.felix.dto.Result;
-import com.felix.entity.SeckillVoucher;
-import com.felix.entity.VoucherOrder;
+import com.felix.model.dto.Result;
+import com.felix.model.entity.SeckillVoucher;
+import com.felix.model.entity.VoucherOrder;
 import com.felix.listener.MyCallBack;
 import com.felix.mapper.VoucherOrderMapper;
 import com.felix.service.ISeckillVoucherService;
@@ -35,7 +35,7 @@ import java.util.Map;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
-import static com.felix.utils.RabbitmqConstants.*;
+import static com.felix.model.constants.RabbitmqConstants.*;
 
 /**
  * <p>

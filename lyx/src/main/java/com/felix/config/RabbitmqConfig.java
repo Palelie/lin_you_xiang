@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.HashMap;
 
-import static com.felix.utils.RabbitmqConstants.*;
+import static com.felix.model.constants.RabbitmqConstants.*;
 
 @Configuration
 public class RabbitmqConfig {

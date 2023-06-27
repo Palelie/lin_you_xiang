@@ -1,4 +1,4 @@
-package com.felix.entity;
+package com.felix.model.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;

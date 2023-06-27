@@ -1,4 +1,4 @@
-package com.felix.entity;
+package com.felix.model.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -8,62 +8,56 @@ import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("tb_user_info")
-public class UserInfo implements Serializable {
+@TableName("tb_blog_comments")
+public class BlogComments implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 主键，用户id
+     * 主键
      */
-    @TableId(value = "user_id", type = IdType.AUTO)
+    @TableId(value = "id", type = IdType.AUTO)
+    private Long id;
+
+    /**
+     * 用户id
+     */
     private Long userId;
 
     /**
-     * 城市名称
+     * 探店id
      */
-    private String city;
+    private Long blogId;
 
     /**
-     * 个人介绍，不要超过128个字符
+     * 关联的1级评论id，如果是一级评论，则值为0
      */
-    private String introduce;
+    private Long parentId;
 
     /**
-     * 粉丝数量
+     * 回复的评论id
      */
-    private Integer fans;
+    private Long answerId;
 
     /**
-     * 关注的人的数量
+     * 回复的内容
      */
-    private Integer followee;
+    private String content;
 
     /**
-     * 性别，0：男，1：女
+     * 点赞数
      */
-    private Boolean gender;
+    private Integer liked;
 
     /**
-     * 生日
+     * 状态，0：正常，1：被举报，2：禁止查看
      */
-    private LocalDate birthday;
-
-    /**
-     * 积分
-     */
-    private Integer credits;
-
-    /**
-     * 会员级别，0~9级,0代表未开通会员
-     */
-    private Boolean level;
+    private Boolean status;
 
     /**
      * 创建时间

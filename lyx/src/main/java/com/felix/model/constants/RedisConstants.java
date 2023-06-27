@@ -1,4 +1,4 @@
-package com.felix.utils;
+package com.felix.model.constants;
 
 public class RedisConstants {
     public static final String LOGIN_CODE_KEY = "login:code:";

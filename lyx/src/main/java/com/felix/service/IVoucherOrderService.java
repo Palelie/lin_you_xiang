@@ -1,7 +1,7 @@
 package com.felix.service;
 
-import com.felix.dto.Result;
-import com.felix.entity.VoucherOrder;
+import com.felix.model.dto.Result;
+import com.felix.model.entity.VoucherOrder;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

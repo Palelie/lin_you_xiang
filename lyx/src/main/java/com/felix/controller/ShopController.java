@@ -3,10 +3,10 @@ package com.felix.controller;
 
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.felix.dto.Result;
-import com.felix.entity.Shop;
+import com.felix.model.dto.Result;
+import com.felix.model.entity.Shop;
 import com.felix.service.IShopService;
-import com.felix.utils.SystemConstants;
+import com.felix.model.constants.SystemConstants;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;

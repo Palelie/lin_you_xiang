@@ -1,7 +1,7 @@
 package com.felix.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.felix.entity.Voucher;
+import com.felix.model.entity.Voucher;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

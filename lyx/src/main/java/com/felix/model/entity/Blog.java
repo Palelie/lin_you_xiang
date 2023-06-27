@@ -1,4 +1,4 @@
-package com.felix.entity;
+package com.felix.model.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -14,8 +14,8 @@ import java.time.LocalDateTime;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("tb_shop")
-public class Shop implements Serializable {
+@TableName("tb_blog")
+public class Blog implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -24,66 +24,54 @@ public class Shop implements Serializable {
      */
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
-
     /**
-     * 商铺名称
+     * 商户id
      */
+    private Long shopId;
+    /**
+     * 用户id
+     */
+    private Long userId;
+    /**
+     * 用户图标
+     */
+    @TableField(exist = false)  //该注解表示数据库中没有这个字段，需要自己维护（推荐使用VO或DTO封装）
+    private String icon;
+    /**
+     * 用户姓名
+     */
+    @TableField(exist = false)
     private String name;
-
     /**
-     * 商铺类型的id
+     * 是否点赞过了
      */
-    private Long typeId;
+    @TableField(exist = false)
+    private Boolean isLike;
 
     /**
-     * 商铺图片，多个图片以','隔开
+     * 标题
+     */
+    private String title;
+
+    /**
+     * 探店的照片，最多9张，多张以","隔开
      */
     private String images;
 
     /**
-     * 商圈，例如陆家嘴
+     * 探店的文字描述
      */
-    private String area;
+    private String content;
 
     /**
-     * 地址
+     * 点赞数量
      */
-    private String address;
-
-    /**
-     * 经度
-     */
-    private Double x;
-
-    /**
-     * 维度
-     */
-    private Double y;
-
-    /**
-     * 均价，取整数
-     */
-    private Long avgPrice;
-
-    /**
-     * 销量
-     */
-    private Integer sold;
+    private Integer liked;
 
     /**
      * 评论数量
      */
     private Integer comments;
-
-    /**
-     * 评分，1~5分，乘10保存，避免小数
-     */
-    private Integer score;
-
-    /**
-     * 营业时间，例如 10:00-22:00
-     */
-    private String openHours;
 
     /**
      * 创建时间
@@ -96,6 +84,4 @@ public class Shop implements Serializable {
     private LocalDateTime updateTime;
 
 
-    @TableField(exist = false)
-    private Double distance;
 }

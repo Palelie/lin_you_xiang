@@ -4,23 +4,25 @@ import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.bean.copier.CopyOptions;
 import cn.hutool.core.lang.UUID;
 import cn.hutool.core.util.RandomUtil;
+import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.felix.dto.LoginFormDTO;
-import com.felix.dto.Result;
-import com.felix.dto.UserDTO;
-import com.felix.entity.User;
+import com.felix.model.dto.LoginFormDTO;
+import com.felix.model.dto.Result;
+import com.felix.model.dto.UserDTO;
+import com.felix.model.entity.User;
 import com.felix.mapper.UserMapper;
 import com.felix.service.IUserService;
-import com.felix.utils.RedisConstants;
+import com.felix.model.constants.RedisConstants;
 import com.felix.utils.RegexUtils;
-import com.felix.utils.SystemConstants;
+import com.felix.model.constants.SystemConstants;
 import com.felix.utils.UserHolder;
 import org.springframework.data.redis.connection.BitFieldSubCommands;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -29,7 +31,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-import static com.felix.utils.RedisConstants.USER_SIGN_KEY;
+import static com.felix.model.constants.RedisConstants.USER_SIGN_KEY;
 
 /**
  * <p>
@@ -75,7 +77,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
      * @param loginForm 登录参数，包含手机号、验证码；或者手机号、密码
      */
     @Override
-    public Result login(LoginFormDTO loginForm, HttpSession session) {
+    public Result login(LoginFormDTO loginForm) {
         // 实现登录功能
         //1、校验手机号格式是否正确
         String phone = loginForm.getPhone();
@@ -124,6 +126,20 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 
         //8、返回token
         return Result.ok(token);
+    }
+
+    @Override
+    public Result logout(HttpServletRequest request) {
+        UserDTO user = UserHolder.getUser();
+        if (BeanUtil.isEmpty(user)){
+            return null;
+        }
+        UserHolder.removeUser();
+        String token = request.getHeader("authorization");
+        if (StrUtil.isNotBlank(token)){
+            stringRedisTemplate.delete(RedisConstants.LOGIN_USER_KEY + token);
+        }
+        return null;
     }
 
     /**

@@ -2,9 +2,9 @@ package com.felix.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.felix.dto.Result;
-import com.felix.dto.UserDTO;
-import com.felix.entity.Follow;
+import com.felix.model.dto.Result;
+import com.felix.model.dto.UserDTO;
+import com.felix.model.entity.Follow;
 import com.felix.mapper.FollowMapper;
 import com.felix.service.IFollowService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

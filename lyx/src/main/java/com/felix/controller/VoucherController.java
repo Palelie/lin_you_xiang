@@ -1,8 +1,8 @@
 package com.felix.controller;
 
 
-import com.felix.dto.Result;
-import com.felix.entity.Voucher;
+import com.felix.model.dto.Result;
+import com.felix.model.entity.Voucher;
 import com.felix.service.IVoucherService;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package com.felix.utils;
+package com.felix.model.constants;
 
 public class SystemConstants {
     public static final String IMAGE_UPLOAD_DIR = "E:\\javaPro\\Redis_Product\\nginx-1.18.0\\html\\felix\\imgs\\";

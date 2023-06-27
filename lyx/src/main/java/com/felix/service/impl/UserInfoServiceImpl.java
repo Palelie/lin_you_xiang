@@ -1,6 +1,6 @@
 package com.felix.service.impl;
 
-import com.felix.entity.UserInfo;
+import com.felix.model.entity.UserInfo;
 import com.felix.mapper.UserInfoMapper;
 import com.felix.service.IUserInfoService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

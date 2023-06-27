@@ -3,9 +3,9 @@ package com.felix;
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.bean.copier.CopyOptions;
 import cn.hutool.core.lang.UUID;
-import com.felix.dto.UserDTO;
-import com.felix.entity.Shop;
-import com.felix.entity.User;
+import com.felix.model.dto.UserDTO;
+import com.felix.model.entity.Shop;
+import com.felix.model.entity.User;
 import com.felix.service.IUserService;
 import com.felix.service.impl.ShopServiceImpl;
 import com.felix.utils.RedisIdWorker;
@@ -24,8 +24,8 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.stream.Collectors;
 
-import static com.felix.utils.RedisConstants.LOGIN_USER_KEY;
-import static com.felix.utils.RedisConstants.SHOP_GEO_KEY;
+import static com.felix.model.constants.RedisConstants.LOGIN_USER_KEY;
+import static com.felix.model.constants.RedisConstants.SHOP_GEO_KEY;
 
 @SpringBootTest
 class LYXApplicationTests {
