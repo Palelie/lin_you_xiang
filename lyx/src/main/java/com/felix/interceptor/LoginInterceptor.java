@@ -1,6 +1,7 @@
-package com.felix.utils;
+package com.felix.interceptor;
 
 import com.felix.model.dto.UserDTO;
+import com.felix.utils.UserHolder;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;

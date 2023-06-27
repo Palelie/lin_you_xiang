@@ -1,7 +1,7 @@
 package com.felix.config;
 
-import com.felix.utils.LoginInterceptor;
-import com.felix.utils.ReflectUserInterceptor;
+import com.felix.interceptor.LoginInterceptor;
+import com.felix.interceptor.ReflectUserInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
